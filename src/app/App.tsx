@@ -3,9 +3,9 @@ import { FC, Suspense } from 'react';
 
 import './styles/index.scss';
 import { Link, Route, Routes } from 'react-router-dom';
-import { AboutPageAsync as AboutPage } from './pages/AboutPage/AboutPage.async';
-import { MainPageAsync as MainPage } from './pages/MainPage/MainPage.async';
-import { useTheme } from './theme/useTheme';
+import { AboutPage } from '@/pages/AboutPage';
+import { MainPage } from '@/pages/MainPage';
+import { useTheme } from '@/shared/hooks/useTheme';
 
 export const App: FC = () => {
   const { theme, toggleTheme } = useTheme();

@@ -1,7 +1,7 @@
+import { LocalStorage } from '@/shared/lib/LocalStorage';
+import { LOCAL_STORAGE_THEME_KEY, ThemeContext } from '@/shared/lib/ThemeContext';
+import { Theme } from '@/shared/types/theme';
 import { FC, useState } from 'react';
-import { LocalStorage } from '../lib/LocalStorage';
-import { LOCAL_STORAGE_THEME_KEY, ThemeContext } from './ThemeContext';
-import type { Theme } from './ThemeContext';
 
 export const ThemeProvider: FC = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(
