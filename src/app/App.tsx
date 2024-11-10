@@ -7,13 +7,11 @@ import { Router } from './providers/Router/Router';
 import { Navbar } from '@/widgets/Navbar';
 
 export const App: FC = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <section className={cn('app', theme)}>
       <Navbar />
-
-      <button onClick={toggleTheme}>Toggle theme</button>
 
       <Router />
     </section>
