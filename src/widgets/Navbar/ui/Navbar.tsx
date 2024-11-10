@@ -3,7 +3,6 @@ import { FC } from 'react';
 
 import s from './Navbar.module.scss';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
-import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher/ThemeSwitcher';
 
 const cn = classNames.bind(s);
 
@@ -15,8 +14,7 @@ export const Navbar: FC<INavbarProps> = (props) => {
   const { className } = props;
 
   return (
-    <div className={cn(s.navbar, className)}>
-      <ThemeSwitcher />
+    <header className={cn(s.navbar, className)}>
       <nav className={cn(s.navList)}>
         <AppLink to={'/'} theme='secondary'>
           Главная
@@ -25,6 +23,6 @@ export const Navbar: FC<INavbarProps> = (props) => {
           О сайте
         </AppLink>
       </nav>
-    </div>
+    </header>
   );
 };
