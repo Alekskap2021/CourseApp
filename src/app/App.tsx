@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { Suspense } from 'react';
 import type { FC } from 'react';
 
 import './styles/index.scss';
@@ -12,11 +13,13 @@ export const App: FC = () => {
 
   return (
     <section className={cn('app', theme)}>
-      <Navbar />
-      <div className='content'>
-        <Sidebar />
-        <Router />
-      </div>
+      <Suspense fallback=''>
+        <Navbar />
+        <div className='content'>
+          <Sidebar />
+          <Router />
+        </div>
+      </Suspense>
     </section>
   );
 };
