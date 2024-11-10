@@ -15,7 +15,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
           modules: {
             // namedExport: true,
             auto: (path: string) => path.includes('.module.scss'),
-            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:8]' : '[hash:base64:8]',
+            localIdentName: isDev ? '[local].[hash:base64:8]' : '[hash:base64:8]',
           },
         },
       },
