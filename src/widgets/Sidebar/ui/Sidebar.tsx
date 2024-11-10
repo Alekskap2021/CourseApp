@@ -3,6 +3,7 @@ import { FC, useState } from 'react';
 
 import s from './Sidebar.module.scss';
 import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher/ThemeSwitcher';
+import { LangSwitcher } from '@/shared/ui/LangSwitcher/LangSwitcher';
 
 const cn = classNames.bind(s);
 
@@ -22,7 +23,7 @@ export const Sidebar: FC<ISidebarProps> = (props) => {
 
       <div className={cn(s.switchers)}>
         <ThemeSwitcher />
-        {/* LangSwitcher */}
+        <LangSwitcher />
       </div>
     </div>
   );
