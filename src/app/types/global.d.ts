@@ -31,3 +31,5 @@ declare module '*.webp' {
   const webp: string;
   export default webp;
 }
+
+declare const __IS_DEV__: boolean;
