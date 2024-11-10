@@ -1,11 +1,10 @@
 import cn from 'classnames';
-import { FC, Suspense } from 'react';
+import { FC } from 'react';
 
 import './styles/index.scss';
-import { Link, Route, Routes } from 'react-router-dom';
-import { AboutPage } from '@/pages/AboutPage';
-import { MainPage } from '@/pages/MainPage';
+import { Link } from 'react-router-dom';
 import { useTheme } from '@/shared/hooks/useTheme';
+import { Router } from './providers/Router/Router';
 
 export const App: FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -15,12 +14,8 @@ export const App: FC = () => {
       <Link to={'/'}>Главная</Link>
       <Link to={'/about'}>О сайте</Link>
       <button onClick={toggleTheme}>Toggle theme</button>
-      <Suspense fallback={'loading'}>
-        <Routes>
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/' element={<MainPage />} />
-        </Routes>
-      </Suspense>
+
+      <Router />
     </section>
   );
 };
