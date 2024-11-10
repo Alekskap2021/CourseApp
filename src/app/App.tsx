@@ -5,6 +5,7 @@ import './styles/index.scss';
 import { useTheme } from '@/shared/hooks/useTheme';
 import { Router } from './providers/Router/Router';
 import { Navbar } from '@/widgets/Navbar';
+import { Sidebar } from '@/widgets/Sidebar';
 
 export const App: FC = () => {
   const { theme } = useTheme();
@@ -12,8 +13,10 @@ export const App: FC = () => {
   return (
     <section className={cn('app', theme)}>
       <Navbar />
-
-      <Router />
+      <div className='content'>
+        <Sidebar />
+        <Router />
+      </div>
     </section>
   );
 };
