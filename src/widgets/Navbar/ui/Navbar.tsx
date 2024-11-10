@@ -2,9 +2,8 @@ import classNames from 'classnames/bind';
 import { FC } from 'react';
 
 import s from './Navbar.module.scss';
-import { Router } from '@/app/providers/Router/Router';
-import { Link } from 'react-router-dom';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
+import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher/ThemeSwitcher';
 
 const cn = classNames.bind(s);
 
@@ -17,6 +16,7 @@ export const Navbar: FC<INavbarProps> = (props) => {
 
   return (
     <div className={cn(s.navbar, className)}>
+      <ThemeSwitcher />
       <nav className={cn(s.navList)}>
         <AppLink to={'/'} theme='secondary'>
           Главная
