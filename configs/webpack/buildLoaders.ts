@@ -1,19 +1,18 @@
-import type { RuleSetRule } from 'webpack';
-import { loader, loader as miniCssExtractLoader } from 'mini-css-extract-plugin';
-import { BuildOptions } from './types/BuildOptions';
-import { use } from 'i18next';
+import { loader as miniCssExtractLoader } from "mini-css-extract-plugin";
+import type { RuleSetRule } from "webpack";
+import type { BuildOptions } from "./types/BuildOptions";
 
 export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
   const svgLoader = {
     test: /\.svg$/,
-    use: ['@svgr/webpack'],
+    use: ["@svgr/webpack"],
   };
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|webp)$/i,
     use: [
       {
-        loader: 'file-loader',
+        loader: "file-loader",
       },
     ],
   };
@@ -22,23 +21,23 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     test: /\.s[ac]ss$/i,
 
     use: [
-      isDev ? 'style-loader' : miniCssExtractLoader,
+      isDev ? "style-loader" : miniCssExtractLoader,
       {
-        loader: 'css-loader',
+        loader: "css-loader",
         options: {
           //   esModule: true,
           modules: {
             // namedExport: true,
-            auto: (path: string) => path.includes('.module.scss'),
-            localIdentName: isDev ? '[local].[hash:base64:8]' : '[hash:base64:8]',
+            auto: (path: string) => path.includes(".module.scss"),
+            localIdentName: isDev ? "[local].[hash:base64:8]" : "[hash:base64:8]",
           },
         },
       },
       {
-        loader: 'sass-loader',
+        loader: "sass-loader",
         options: {
           sassOptions: {
-            silenceDeprecations: ['legacy-js-api'],
+            silenceDeprecations: ["legacy-js-api"],
           },
         },
       },
@@ -47,7 +46,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 
   const typescriptLoader = {
     test: /\.tsx?$/,
-    use: 'ts-loader',
+    use: "ts-loader",
     exclude: /node_modules/,
   };
 

@@ -1,12 +1,9 @@
-// @ts-ignore
-
-import type { Configuration } from 'webpack';
-import { BuildOptions } from './types/BuildOptions';
-import { buildPlugins } from './buildPlugins';
-import { buildLoaders } from './buildLoaders';
-import { buildResolvers } from './buildResolvers';
-import { buildDevServer } from './buildDevServer';
-import { join } from 'path';
+import type { Configuration } from "webpack";
+import { buildDevServer } from "./buildDevServer";
+import { buildLoaders } from "./buildLoaders";
+import { buildPlugins } from "./buildPlugins";
+import { buildResolvers } from "./buildResolvers";
+import type { BuildOptions } from "./types/BuildOptions";
 
 export function buildWebpackConfig(options: BuildOptions): Configuration {
   const { mode, paths, isDev } = options;
@@ -20,7 +17,7 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
     resolve: buildResolvers(options),
 
     output: {
-      filename: '[name].[contenthash].bundle.js',
+      filename: "[name].[contenthash].bundle.js",
 
       // chunkFilename: 'chunks/[path].[name].[id].[contenthash].chunk.js',
 
@@ -30,7 +27,7 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
     },
 
     plugins: buildPlugins(options),
-    devtool: isDev ? 'inline-source-map' : undefined,
+    devtool: isDev ? "inline-source-map" : undefined,
     devServer: isDev ? buildDevServer(options) : undefined,
   };
 }

@@ -1,9 +1,9 @@
-import classNames from 'classnames/bind';
-import { FC, useState } from 'react';
-
-import s from './Sidebar.module.scss';
-import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher/ThemeSwitcher';
-import { LangSwitcher } from '@/shared/ui/LangSwitcher/LangSwitcher';
+import classNames from "classnames/bind";
+import type { FC } from "react";
+import { useState } from "react";
+import { LangSwitcher } from "@/shared/ui/LangSwitcher/LangSwitcher";
+import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
+import s from "./Sidebar.module.scss";
 
 const cn = classNames.bind(s);
 

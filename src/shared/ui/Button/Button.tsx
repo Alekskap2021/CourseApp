@@ -1,11 +1,10 @@
-import classNames from 'classnames/bind';
-import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
-
-import s from './Button.module.scss';
+import classNames from "classnames/bind";
+import type { ButtonHTMLAttributes, FC, ReactNode } from "react";
+import s from "./Button.module.scss";
 
 const cn = classNames.bind(s);
 
-type ButtonTheme = 'clear';
+type ButtonTheme = "clear";
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
@@ -14,7 +13,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<IButtonProps> = (props) => {
-  const { className, children, theme, ...otherProps } = props;
+  const { className, children, theme = "clear", ...otherProps } = props;
 
   return (
     <button className={cn(s.button, s[theme], className)} {...otherProps}>

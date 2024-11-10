@@ -1,6 +1,6 @@
-import { Dispatch, SetStateAction } from 'react';
+import type { Dispatch, SetStateAction } from "react";
 
-export type Theme = 'dark' | 'light';
+export type Theme = "dark" | "light";
 
 export interface ThemeContextProps {
   theme: Theme;

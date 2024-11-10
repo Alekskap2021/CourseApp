@@ -1,7 +1,7 @@
 export class LocalStorage {
   static setItem<T>(key: string, value: T): void {
     let stringValue: string;
-    if (typeof value === 'string') {
+    if (typeof value === "string") {
       stringValue = value;
     } else {
       stringValue = JSON.stringify(value);
