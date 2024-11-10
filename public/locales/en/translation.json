@@ -1,5 +1,6 @@
 {
-  "Тестовый пример": "Mocked example",
-  "Перевод": "Translate",
-  "language": "English"
+  "language": "English",
+  "toggleTheme": "Switch",
+  "mainPageLink": "Home",
+  "aboutPageLink": "About Us"
 }
