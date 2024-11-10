@@ -5,6 +5,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:i18next/recommended",
     "plugin:@conarti/feature-sliced/recommended",
     "plugin:prettier/recommended",
     "prettier",
@@ -23,6 +24,7 @@ module.exports = {
     "@typescript-eslint/consistent-type-imports": "warn",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",
+    // "i18next/no-literal-string": ["error", { markupOnly: true, mode: "jsx-text-only" }],
     "prettier/prettier": [
       "error",
       {},
