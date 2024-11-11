@@ -2,5 +2,7 @@
   "language": "Русский",
   "toggleTheme": "Переключить",
   "mainPageLink": "Главная",
-  "aboutPageLink": "О нас"
+  "aboutPageLink": "О нас",
+  "wentWrong": "Кажется, что-то пошло не так",
+  "tryAgan": "Попробовать снова"
 }

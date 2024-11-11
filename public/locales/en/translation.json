@@ -2,5 +2,7 @@
   "language": "English",
   "toggleTheme": "Switch",
   "mainPageLink": "Home",
-  "aboutPageLink": "About Us"
+  "aboutPageLink": "About Us",
+  "wentWrong": "It seems like something went wrong",
+  "tryAgan": "Try again"
 }
