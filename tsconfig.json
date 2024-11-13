@@ -19,7 +19,7 @@
     "allowSyntheticDefaultImports": true,
     "rootDirs": [".", "dts"]
   },
-  "include": ["src", "dts"],
+  "include": ["src", "dts", "configs"],
 
   "ts-node": {
     "compilerOptions": {
