@@ -9,6 +9,8 @@
     "start": "webpack serve --env port=3000 & npm run styles",
     "build": "webpack build --env mode=production",
     "build:dev": "webpack build --env mode=development",
+    "analyze:dev": "webpack --env analyze=true mode=development",
+    "analyze": "webpack --env analyze=true mode=production",
     "unit": "jest --config ./configs/jest/jest.config.ts",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
