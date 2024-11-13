@@ -8,6 +8,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     "strictNullChecks": true,
+    "strictBindCallApply": true,
 
     // Для абсолютного импорта
     "baseUrl": ".",

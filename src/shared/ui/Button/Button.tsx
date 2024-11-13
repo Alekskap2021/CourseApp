@@ -4,7 +4,7 @@ import s from "./Button.module.scss";
 
 const cn = classNames.bind(s);
 
-type ButtonTheme = "clear";
+export type ButtonTheme = "clear" | "outline";
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;

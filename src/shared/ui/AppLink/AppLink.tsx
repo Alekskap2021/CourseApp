@@ -7,7 +7,7 @@ import s from "./AppLink.module.scss";
 
 const cn = classNames.bind(s);
 
-type AppLinkTheme = "primary" | "secondary";
+export type AppLinkTheme = "primary" | "secondary";
 
 interface IAppLinkProps extends LinkProps {
   className?: string;

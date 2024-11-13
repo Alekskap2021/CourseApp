@@ -1,10 +1,8 @@
-import { loader as miniCssExtractLoader } from "mini-css-extract-plugin";
 import type { RuleSetRule } from "webpack";
+import { buildCssLoader } from "./loaders/buildCssLoader";
 import type { BuildOptions } from "./types/BuildOptions";
 
 export function buildLoaders({ env }: BuildOptions): RuleSetRule[] {
-  const isDev = env.mode === "development";
-
   const svgLoader = {
     test: /\.svg$/,
     use: ["@svgr/webpack"],
@@ -19,32 +17,7 @@ export function buildLoaders({ env }: BuildOptions): RuleSetRule[] {
     ],
   };
 
-  const cssLoader = {
-    test: /\.s[ac]ss$/i,
-
-    use: [
-      isDev ? "style-loader" : miniCssExtractLoader,
-      {
-        loader: "css-loader",
-        options: {
-          //   esModule: true,
-          modules: {
-            // namedExport: true,
-            auto: (path: string) => path.includes(".module.scss"),
-            localIdentName: isDev ? "[local].[hash:base64:8]" : "[hash:base64:8]",
-          },
-        },
-      },
-      {
-        loader: "sass-loader",
-        options: {
-          sassOptions: {
-            silenceDeprecations: ["legacy-js-api"],
-          },
-        },
-      },
-    ],
-  };
+  const cssLoader = buildCssLoader(env.mode === "development");
 
   const typescriptLoader = {
     test: /\.tsx?$/,
