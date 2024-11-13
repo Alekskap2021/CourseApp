@@ -4,11 +4,6 @@ import { buildWebpackConfig } from "./configs/webpack/buildWebpackConfig";
 import type { BuildEnv, BuildMode, BuildPaths } from "./configs/webpack/types/BuildOptions";
 
 export default (env: BuildEnv) => {
-  const mode: BuildMode = env.mode || "development";
-  const PORT = env.port || 3000;
-
-  const isDev = mode === "development";
-
   const paths: BuildPaths = {
     entry: path.resolve(__dirname, "src", "index.tsx"),
     src: path.resolve(__dirname, "src"),
@@ -17,10 +12,8 @@ export default (env: BuildEnv) => {
   };
 
   const config: Configuration = buildWebpackConfig({
-    mode,
+    env: { mode: env.mode || "development", port: env.port || 3000, analyze: Boolean(env.analyze) },
     paths,
-    isDev,
-    port: PORT,
   });
 
   return config;

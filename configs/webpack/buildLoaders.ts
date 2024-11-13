@@ -2,7 +2,9 @@ import { loader as miniCssExtractLoader } from "mini-css-extract-plugin";
 import type { RuleSetRule } from "webpack";
 import type { BuildOptions } from "./types/BuildOptions";
 
-export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
+export function buildLoaders({ env }: BuildOptions): RuleSetRule[] {
+  const isDev = env.mode === "development";
+
   const svgLoader = {
     test: /\.svg$/,
     use: ["@svgr/webpack"],
