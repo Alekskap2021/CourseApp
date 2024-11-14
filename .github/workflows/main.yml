@@ -22,7 +22,7 @@ jobs:
         if: success()
         run: tar -czf node_modules.tar.gz node_modules
       - name: Upload dependencies
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: node_modules
           path: node_modules.tar.gz
@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Download dependencies
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: node_modules
       - name: Extract dependencies
@@ -47,7 +47,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Download dependencies
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: node_modules
       - name: Extract dependencies
@@ -61,7 +61,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Download dependencies
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: node_modules
       - name: Extract dependencies
@@ -75,7 +75,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Download dependencies
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: node_modules
       - name: Extract dependencies
