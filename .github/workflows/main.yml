@@ -94,9 +94,7 @@ jobs:
           name: node_modules
       - name: Extract dependencies
         run: tar -xzf node_modules.tar.gz
-      - name: Start Storybook
-        run: |
-          nohup npm run sb:build &  # Запуск Storybook в фоне
-          npx wait-on http://localhost:6006  # Ожидание, пока сервер будет доступен
+      - name: Build Storybook
+        run: npm run sb:build
       - name: Screenshot testing
         run: npm run test:ui
