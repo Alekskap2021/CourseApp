@@ -13,15 +13,15 @@
     "analyze": "webpack --env analyze=true mode=production",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "test:unit": "jest --config ./configs/jest/jest.config.ts",
-    "test:ui": "npx loki test",
-    "test:ui:ok": "npx loki aproove",
+    "test:ui:ok": "npx loki approve",
+    "test:ui": "npm run sb:build && loki --requireReference --reactUrl file:./strorybook-static",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "lint:ts": "npx eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "npx eslint \"**/*.{ts,tsx}\" --fix",
     "lint": "npm run lint:ts && npm run lint:scss",
     "lint:fix": "npm run lint:ts:fix && npm run lint:scss:fix",
-    "storybook": "start-storybook -p 6006 -c ./configs/storybook",
-    "build-storybook": "build-storybook -c ./configs/storybook"
+    "sb": "start-storybook -p 6006 -c ./configs/storybook",
+    "sb:build": "build-storybook -c ./configs/storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
