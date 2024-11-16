@@ -24,6 +24,9 @@ module.exports = {
     "@typescript-eslint/consistent-type-imports": "warn",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+
     // "i18next/no-literal-string": ["error", { markupOnly: true, mode: "jsx-text-only" }],
     "prettier/prettier": [
       "error",
