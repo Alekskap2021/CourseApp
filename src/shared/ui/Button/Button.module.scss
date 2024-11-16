@@ -4,13 +4,18 @@
   color: var(--primary-color);
 }
 
-.clear {
+.clear,
+.clearInverted {
   margin: 0;
   padding: 0;
 
   background: none;
   border: none;
   outline: transparent;
+}
+
+.clearInverted {
+  color: var(--inverted-primary-color);
 }
 
 .outline {

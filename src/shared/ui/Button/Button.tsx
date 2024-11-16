@@ -4,7 +4,7 @@ import s from "./Button.module.scss";
 
 const cn = classNames.bind(s);
 
-export type ButtonTheme = "clear" | "outline" | "bg" | "bgInverted";
+export type ButtonTheme = "clear" | "clearInverted" | "outline" | "bg" | "bgInverted";
 export type ButtonSize = "m" | "l" | "xl";
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
