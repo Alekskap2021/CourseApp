@@ -34,6 +34,15 @@ jobs:
       - name: Installing modules
         run: npm install
 
+      # Сохранение в кэш (если его не было)
+      - name: Update cache
+        # Только если кэш не найден
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+
   Linting_typescript:
     runs-on: ubuntu-latest
     needs: Initial_setup
