@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/app/providers/ThemeProvider/ThemeProvider";
 import { AppErrorFallback } from "@/widgets/AppErrorFallback";
 import { ErrorBoundary } from "@/shared/ui/ErrorBoundary/ErrorBoundary";
 import "@/shared/configs/i18n";
+import "@/app/styles/index.scss";
 
 render(
   <BrowserRouter>
