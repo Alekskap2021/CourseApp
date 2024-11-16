@@ -3,7 +3,7 @@ import type { FC } from "react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LangSwitcher } from "@/shared/ui/LangSwitcher/LangSwitcher";
-import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
+// import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
 import s from "./Sidebar.module.scss";
 
 const cn = classNames.bind(s);
