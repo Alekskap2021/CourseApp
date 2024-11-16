@@ -27,7 +27,7 @@ export const Sidebar: FC<ISidebarProps> = (props) => {
       </button>
 
       <div className={cn(s.switchers)}>
-        <ThemeSwitcher />
+        {/* <ThemeSwitcher /> */}
         <LangSwitcher />
       </div>
     </div>
