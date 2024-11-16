@@ -6,7 +6,7 @@ on:
     branches: [main]
 jobs:
   pipeline:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [20.x]
@@ -27,7 +27,5 @@ jobs:
         run: npm run lint:scss
       - name: Unit testing
         run: npm run test:unit
-      - name: Building storybook
-        run: npm run sb:build
       - name: Screenshot testing
-        run: npm run test:ui:ci
+        run: npm run test:ui
