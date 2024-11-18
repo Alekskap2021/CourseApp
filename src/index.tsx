@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { App } from "@/app/App";
+import { ReduxProvider } from "@/app/providers/Redux/ReduxProvider";
 import { AppErrorFallback } from "@/widgets/AppErrorFallback";
 import { ThemeProvider } from "@/shared/lib/theme/ThemeProvider";
 import { ErrorBoundary } from "@/shared/ui/ErrorBoundary/ErrorBoundary";
@@ -18,9 +19,11 @@ render(
         </Suspense>
       }
     >
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
+      <ReduxProvider>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </ReduxProvider>
     </ErrorBoundary>
   </BrowserRouter>,
   document.getElementById("root")
