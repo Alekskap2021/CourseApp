@@ -18,7 +18,7 @@
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "lint:fix": "npm run lint:ts:fix && npm run lint:scss:fix",
     "unit": "jest --config ./configs/jest/jest.config.ts",
-    "snapshot": "npm run sb:build && loki --requireReference --reactUri file:./storybook-static",
+    "snapshot": "npm run sb:build && loki update --storiesFilter=\"^shared\\/Modal Dark$\" --requireReference --reactUri file:./storybook-static",
     "snapshot:ok": "npx loki approve",
     "snapshot:report": "node scripts/generateVisualJsonReport.mjs && reg-cli --from .loki/report.json --report .loki/report.html && node scripts/openLokiReport.mjs",
     "sb": "start-storybook -p 6006 -c ./configs/storybook",
