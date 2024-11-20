@@ -1,5 +1,7 @@
 {
   "signIn": "Login",
   "username": "Enter username",
-  "userPassword": "Enter password"
+  "userPassword": "Enter password",
+  "authForm": "Authorization form",
+  "authError": "An error occurred when attempting to log in. Please check that the entered data is correct."
 }

@@ -6,5 +6,6 @@
   "wentWrong": "It seems like something went wrong",
   "tryAgan": "Try again",
   "shortLanguage": "En",
-  "logIn": "Login"
+  "logIn": "Login",
+  "logout": "Log out"
 }
