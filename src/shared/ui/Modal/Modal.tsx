@@ -16,7 +16,7 @@ interface IModalProps {
 export const Modal: FC<IModalProps> = (props) => {
   const { className, children, isOpen = false, onClose, lazy = true } = props;
 
-  const [isMounted, setIsMounted] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
