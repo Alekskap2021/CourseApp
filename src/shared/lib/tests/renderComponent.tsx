@@ -5,13 +5,13 @@ import { I18nextProvider } from "react-i18next";
 import { Provider } from "react-redux";
 import { MemoryRouter } from "react-router-dom";
 // eslint-disable-next-line @conarti/feature-sliced/layers-slices
-import { createReduxStore, type AppStore, type RootState } from "@/app/providers/Redux/reduxConfig";
+import { createReduxStore, type AppStore, type RootStore } from "@/app/providers/Redux/reduxConfig";
 import i18nForTests from "./i18nForTest";
 
 export interface componentRenderOptions {
   route?: string;
   store?: AppStore;
-  initialState?: DeepPartial<RootState>;
+  initialState?: DeepPartial<RootStore>;
 }
 
 export function renderComponent(component: ReactNode, options: componentRenderOptions = {}) {

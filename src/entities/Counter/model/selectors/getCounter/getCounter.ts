@@ -1,3 +1,3 @@
-import type { RootState } from "@/app/providers/Redux/reduxConfig";
+import type { RootStore } from "@/app/providers/Redux/reduxConfig";
 
-export const getCounter = (state: RootState) => state.counter;
+export const getCounter = (state: RootStore) => state.counter;
