@@ -1,8 +1,8 @@
 import { addDecorator } from "@storybook/react";
-// import { ThemeDecorator } from "@/src/shared/configs/decorators/ThemeDecorator";
 import { RouterDecorator } from "@/shared/configs/decorators/RouterDecorator";
 import { StyleDecorator } from "@/shared/configs/decorators/StyleDecorator";
 import { ThemeDecorator } from "@/shared/configs/decorators/ThemeDecorator";
+import { TranslationDecorator } from "@/shared/configs/decorators/TranslationsDecorator";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -22,5 +22,6 @@ export const parameters = {
 };
 
 addDecorator(StyleDecorator);
+addDecorator(TranslationDecorator);
 addDecorator(ThemeDecorator("light"));
 addDecorator(RouterDecorator);

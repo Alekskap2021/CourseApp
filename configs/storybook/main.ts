@@ -1,9 +1,10 @@
 import path from "path";
-import type { Configuration, RuleSetRule } from "webpack";
+import { DefinePlugin, type Configuration, type RuleSetRule } from "webpack";
 import { buildCssLoader } from "../webpack/loaders/buildCssLoader";
 
 module.exports = {
   stories: ["../../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  staticDirs: ["../../public"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -19,6 +20,9 @@ module.exports = {
   webpackFinal: (config: Configuration): Configuration => {
     if (!config.resolve) {
       config.resolve = {};
+    }
+    if (!config.plugins) {
+      config.plugins = [];
     }
     if (!config.module) {
       config.module = {};
@@ -59,6 +63,8 @@ module.exports = {
       },
       buildCssLoader(true)
     );
+
+    config.plugins.push(new DefinePlugin({ __IS_DEV__: true }));
 
     return config;
   },
