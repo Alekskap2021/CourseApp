@@ -6,7 +6,9 @@ import type { Theme } from "../../types/theme";
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) => {
   return (
     <ThemeProvider initialTheme={theme}>
-      <StoryComponent />
+      <div className={`app ${theme}`}>
+        <StoryComponent />
+      </div>
     </ThemeProvider>
   );
 };
