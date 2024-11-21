@@ -103,10 +103,10 @@ jobs:
         run: npm run snapshot
 
       # Сохранение артефактов (текущие скриншоты)
-      - name: Upload Current Screenshots
-        # Загружаем артефакты, даже если тесты упали
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: current-screenshots
-          path: .loki/current
+    #   - name: Upload Current Screenshots
+    #     # Загружаем артефакты, даже если тесты упали
+    #     if: always()
+    #     uses: actions/upload-artifact@v4
+    #     with:
+    #       name: current-screenshots
+    #       path: .loki/current
