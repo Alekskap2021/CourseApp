@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ThemeDecorator } from "../../configs/decorators/ThemeDecorator";
 import { Modal } from "./Modal";
