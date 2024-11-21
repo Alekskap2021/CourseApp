@@ -100,4 +100,4 @@ jobs:
 
       # Визуальные тесты
       - name: Screenshot testing
-        run: npm run snapshot
+        run: DEBUG=loki:* npm run snapshot
