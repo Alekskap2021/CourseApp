@@ -100,13 +100,13 @@ jobs:
 
       # Визуальные тесты
       - name: Screenshot testing
-        run: DEBUG=loki:* npm run snapshot
+        run: npm run snapshot
 
-      # Сохранение артефактов (текущие скриншоты)
-      - name: Upload Current Screenshots
-        # Загружаем артефакты, даже если тесты упали
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: current-screenshots
-          path: .loki/current
+    #   # Сохранение артефактов (текущие скриншоты)
+    #   - name: Upload Current Screenshots
+    #     # Загружаем артефакты, даже если тесты упали
+    #     if: always()
+    #     uses: actions/upload-artifact@v4
+    #     with:
+    #       name: current-screenshots
+    #       path: .loki/current
