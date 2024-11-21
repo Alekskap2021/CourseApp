@@ -6,6 +6,7 @@
   inset: 0;
 
   opacity: 0;
+  border: 3px solid rgb(223 93 93);
 
   transition: all 0.3s ease;
 }
@@ -29,6 +30,7 @@
 
   opacity: 0;
   background: var(--bg-color);
+  border: 3px solid rgb(136 223 93);
   border-radius: 12px;
 
   transition: all 0.3s ease;
